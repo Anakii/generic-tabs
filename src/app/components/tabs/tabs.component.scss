@@ -1,0 +1,27 @@
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .tabs-titles__wrapper {
+        display: flex;
+        position: relative;
+        z-index: 100;
+        top: 1px;
+        .tab-item {
+            margin-right: 1rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            &.active {
+                border: 1px black solid;
+                border-bottom-color: white;
+            }
+        }
+    }
+    .tab-body__wrapper {
+        border: 1px black solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+}

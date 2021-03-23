@@ -1,0 +1,15 @@
+<div class="tabs-container">
+  <div class="tabs-titles__wrapper">
+
+    <div *ngFor="let tab of tabs" class="tab-item" [ngClass]="{'active': tab.isActive}" (click)="onTabClicked(tab)">
+        {{tab.title}}
+      </div>
+
+  </div>
+
+  <ng-container *ngIf="selectedTab">
+    <div class="tab-body__wrapper">
+      <ng-template [ngTemplateOutlet]="selectedTab?.tabBody"></ng-template>
+    </div>
+  </ng-container>
+</div>
